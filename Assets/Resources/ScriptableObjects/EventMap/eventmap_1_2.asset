@@ -1,0 +1,96 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a99112f35821184c93f50ae178f3609, type: 3}
+  m_Name: eventmap_1_2
+  m_EditorClassIdentifier: 
+  floorMap: {fileID: 2800000, guid: 88883b7c49b92f64799db00a15f37e5f, type: 3}
+  eventBranches:
+  - mapPos: {x: 9, y: 10}
+    eventPages:
+    - switchChecks: []
+      varChecks: []
+      eventSequence:
+        mapPos: {x: 9, y: 10}
+        eventOrientation: 0
+        autoActivate: 1
+        activateDirParams:
+          activateLeft: 0
+          activateRight: 1
+          activateUp: 0
+          activateDown: 0
+        overwriteWalkable: 2
+        activationRange: 0
+        events:
+        - typeOfEvent: 3
+          mapPos: {x: 9, y: 10}
+          stairParams:
+            goingUp: 0
+          ladderParams:
+            changeArea: 0
+            area: 0
+            floor: 0
+          ropeParams:
+            floor: 
+          warpParams:
+            warpData: []
+          doorParams:
+            doorType: 0
+            openDoorLeft: 0
+            openDoorRight: 0
+            openDoorUp: 0
+            openDoorDown: 0
+          dialogParams:
+            dialogEventData: {fileID: 0}
+          battleParams: {}
+          itemParams:
+            itemName: 
+            itemQuantity: 0
+  - mapPos: {x: 4, y: 4}
+    eventPages:
+    - switchChecks: []
+      varChecks: []
+      eventSequence:
+        mapPos: {x: 9, y: 10}
+        eventOrientation: 0
+        autoActivate: 1
+        activateDirParams:
+          activateLeft: 0
+          activateRight: 0
+          activateUp: 0
+          activateDown: 1
+        overwriteWalkable: 2
+        activationRange: 0
+        events:
+        - typeOfEvent: 3
+          mapPos: {x: 9, y: 10}
+          stairParams:
+            goingUp: 0
+          ladderParams:
+            changeArea: 0
+            area: 0
+            floor: 0
+          ropeParams:
+            floor: 
+          warpParams:
+            warpData: []
+          doorParams:
+            doorType: 0
+            openDoorLeft: 0
+            openDoorRight: 0
+            openDoorUp: 0
+            openDoorDown: 0
+          dialogParams:
+            dialogEventData: {fileID: 0}
+          battleParams: {}
+          itemParams:
+            itemName: 
+            itemQuantity: 0

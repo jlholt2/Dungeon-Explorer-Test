@@ -1,0 +1,101 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a99112f35821184c93f50ae178f3609, type: 3}
+  m_Name: eventmap_1_5
+  m_EditorClassIdentifier: 
+  floorMap: {fileID: 2800000, guid: 5ffe7584ef83ff94e8494bace1ef0352, type: 3}
+  floorEvents:
+  - levelGenerator: {fileID: 0}
+    areaNum: 0
+    floorNum: 0
+    typeOfEvent: 4
+    overwriteWalkable: 0
+    activationRange: 0
+    mapPos: {x: 11, y: 6}
+    eventOrientation: 0
+    autoActivate: 1
+    activateLeft: 1
+    activateRight: 0
+    activateUp: 0
+    activateDown: 0
+    transitionData:
+      areaNum: 1
+      floorNum: 2
+      moveToPos: {x: 10, y: 6}
+      spawnDir: 3
+    ropeData: []
+    warpData: []
+    doorType: 0
+    openDoorLeft: 0
+    openDoorRight: 0
+    openDoorUp: 0
+    openDoorDown: 0
+    dialogEventData: {fileID: 0}
+    itemName: 
+    itemQuantity: 0
+  - levelGenerator: {fileID: 0}
+    areaNum: 0
+    floorNum: 0
+    typeOfEvent: 4
+    overwriteWalkable: 2
+    activationRange: 0
+    mapPos: {x: 6, y: 2}
+    eventOrientation: 0
+    autoActivate: 1
+    activateLeft: 0
+    activateRight: 0
+    activateUp: 1
+    activateDown: 0
+    transitionData:
+      areaNum: 1
+      floorNum: 6
+      moveToPos: {x: 6, y: 3}
+      spawnDir: 1
+    ropeData: []
+    warpData: []
+    doorType: 0
+    openDoorLeft: 0
+    openDoorRight: 0
+    openDoorUp: 0
+    openDoorDown: 0
+    dialogEventData: {fileID: 0}
+    itemName: 
+    itemQuantity: 0
+  - levelGenerator: {fileID: 0}
+    areaNum: 0
+    floorNum: 0
+    typeOfEvent: 4
+    overwriteWalkable: 2
+    activationRange: 0
+    mapPos: {x: 2, y: 4}
+    eventOrientation: 0
+    autoActivate: 1
+    activateLeft: 0
+    activateRight: 1
+    activateUp: 0
+    activateDown: 0
+    transitionData:
+      areaNum: 1
+      floorNum: 4
+      moveToPos: {x: 3, y: 4}
+      spawnDir: 1
+    ropeData: []
+    warpData: []
+    doorType: 0
+    openDoorLeft: 0
+    openDoorRight: 0
+    openDoorUp: 0
+    openDoorDown: 0
+    dialogEventData: {fileID: 0}
+    itemName: 
+    itemQuantity: 0
+  eventSequences: []

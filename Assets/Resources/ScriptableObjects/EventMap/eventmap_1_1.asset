@@ -1,0 +1,136 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a99112f35821184c93f50ae178f3609, type: 3}
+  m_Name: eventmap_1_1
+  m_EditorClassIdentifier: Assembly-CSharp::FloorObjectMap
+  floorMap: {fileID: 2800000, guid: aa6ca8f37c85cca47a4b8ecc287cafbf, type: 3}
+  eventBranches:
+  - mapPos: {x: 1, y: 8}
+    eventPages:
+    - switchChecks: []
+      varChecks: []
+      eventSequence:
+        mapPos: {x: 1, y: 8}
+        eventOrientation: 0
+        autoActivate: 0
+        activateDirParams:
+          activateLeft: 0
+          activateRight: 1
+          activateUp: 0
+          activateDown: 0
+        overwriteWalkable: 0
+        activationRange: 0
+        events:
+        - typeOfEvent: 8
+          mapPos: {x: 1, y: 8}
+          stairParams:
+            goingUp: 0
+          ladderParams:
+            changeArea: 0
+            area: 0
+            floor: 0
+          ropeParams:
+            floor: 
+          warpParams:
+            warpData: []
+          doorParams:
+            doorType: 0
+            openDoorLeft: 1
+            openDoorRight: 1
+            openDoorUp: 1
+            openDoorDown: 1
+          dialogParams:
+            dialogEventData: {fileID: 11400000, guid: de9dbdf7fb622fb4fa5aa66f4c0cf249, type: 2}
+          battleParams: {}
+          itemParams:
+            itemName: 
+            itemQuantity: 0
+  - mapPos: {x: 8, y: 10}
+    eventPages:
+    - switchChecks: []
+      varChecks: []
+      eventSequence:
+        mapPos: {x: 8, y: 10}
+        eventOrientation: 0
+        autoActivate: 1
+        activateDirParams:
+          activateLeft: 1
+          activateRight: 0
+          activateUp: 0
+          activateDown: 0
+        overwriteWalkable: 2
+        activationRange: 0
+        events:
+        - typeOfEvent: 3
+          mapPos: {x: 8, y: 10}
+          stairParams:
+            goingUp: 1
+          ladderParams:
+            changeArea: 0
+            area: 0
+            floor: 0
+          ropeParams:
+            floor: 
+          warpParams:
+            warpData: []
+          doorParams:
+            doorType: 0
+            openDoorLeft: 1
+            openDoorRight: 1
+            openDoorUp: 1
+            openDoorDown: 1
+          dialogParams:
+            dialogEventData: {fileID: 11400000, guid: de9dbdf7fb622fb4fa5aa66f4c0cf249, type: 2}
+          battleParams: {}
+          itemParams:
+            itemName: 
+            itemQuantity: 0
+  - mapPos: {x: 4, y: 5}
+    eventPages:
+    - switchChecks: []
+      varChecks: []
+      eventSequence:
+        mapPos: {x: 8, y: 10}
+        eventOrientation: 0
+        autoActivate: 1
+        activateDirParams:
+          activateLeft: 0
+          activateRight: 0
+          activateUp: 1
+          activateDown: 0
+        overwriteWalkable: 2
+        activationRange: 0
+        events:
+        - typeOfEvent: 3
+          mapPos: {x: 8, y: 10}
+          stairParams:
+            goingUp: 1
+          ladderParams:
+            changeArea: 0
+            area: 0
+            floor: 0
+          ropeParams:
+            floor: 
+          warpParams:
+            warpData: []
+          doorParams:
+            doorType: 0
+            openDoorLeft: 1
+            openDoorRight: 1
+            openDoorUp: 1
+            openDoorDown: 1
+          dialogParams:
+            dialogEventData: {fileID: 11400000, guid: de9dbdf7fb622fb4fa5aa66f4c0cf249, type: 2}
+          battleParams: {}
+          itemParams:
+            itemName: 
+            itemQuantity: 0
