@@ -1,8 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public enum EventType { Normal = 0, Move = 1, Wait = 2, Stairs = 3, Ladder = 4, Rope = 5, Warp = 6, Door = 7, DialogScene = 8, Battle = 9, Item = 10, Conditional = 11 } // The type of event.
+// While making the property drawer, comment out lines 33-72, 141, 162-190, 220-224, 329-359, 364-369, 409, 413-421, 451-458, 472-479, 501 & 502
+
+public enum EventType { Blank = 0, Move = 1, Wait = 2, Stairs = 3, Ladder = 4, Rope = 5, Warp = 6, Door = 7, DialogScene = 8, Battle = 9, Item = 10, Conditional = 11, SetSwitch = 12, SetVar = 13 } // The type of event.
 [System.Serializable]
 public partial class FloorEvent
 {
@@ -69,25 +69,16 @@ public partial class FloorEvent
             GameManager.instance.eventVariables[GetEventID()] = initVal;
         }
     }
-    #endregion
+    #endregion 
+    // ^ For making the Property Drawer, this region can be commented out
 
     public void TriggerEvent()
     {
         DoEvent();
     }
 
-    //public void AddEventToQueue()
-    //{
-    //    if (CanInteract())
-    //    {
-    //        //Debug.Log("Event being added to queue, can interact");
-    //        GameManager.instance.NewIEvent(this);
-    //    }
-    //}
-
     private void DoEvent()
     {
-        //Debug.Log("DoEvent()");
         if (useCommonEvent)
         {
             try
@@ -133,32 +124,17 @@ public partial class FloorEvent
             case EventType.Item:
                 ItemGet();
                 break;
+            case EventType.SetSwitch:
+                //SetSwitch();
+                break;
+            case EventType.SetVar:
+                //SetVar();
+                break;
             default:
                 AdvanceEventQueue();
                 break;
         }
-        // add any variables to be changed and to what
     }
-
-    //public bool CanInteract()
-    //{
-    //    switch (GameObject.Find("OWPlayer").transform.eulerAngles.y)
-    //    {
-    //        case 90:
-    //        case -270:
-    //            return activateLeft;
-    //        case -180:
-    //        case 180:
-    //            return activateUp;
-    //        case -90:
-    //        case 270:
-    //            return activateRight;
-    //        case 0:
-    //            return activateDown;
-    //        default:
-    //            return false;
-    //    }
-    //}
 
     private void AdvanceEventQueue()
     {
@@ -221,15 +197,7 @@ public partial class FloorEvent
             Mathf.RoundToInt(GameObject.Find("OWPlayer").transform.localPosition.z + (GameObject.Find("OWPlayer").transform.forward.z * 3)));
     }
 }
-[System.Serializable]
-public struct WarpData
-{
-    public int areaNum; // Only used for ladders. If used for stairs or ropes, it will be ignored.
-    public int floorNum;
-    
-    public Vector2 moveToPos; // Only for Warps. For Ladders and Ropes the same "x,y" position is used, and for Stairs the position becomes 2 in the odirection the player is facing upon activating the event.
-    public FacingDirection spawnDir; // Only for Ropes and Warps. Ignored for Stairs and Ladders.
-}
+public enum FacingDirection { Up = 0, Down = 1, Left = 2, Right = 3 } // For events that spawn meshes, this affects the rotation the mesh spawns in with.
 #endregion
 #region Ladder
 /// <summary>
@@ -318,6 +286,15 @@ public partial class FloorEvent
         // Bring up a menu that allows the player to warp to another preset point, or choose between multiple if multiple are included.
         AdvanceEventQueue();
     }
+}
+[System.Serializable]
+public struct WarpData
+{
+    public int areaNum;
+    public int floorNum;
+
+    public Vector2 moveToPos;
+    public FacingDirection spawnDir;
 }
 #endregion
 #region Door
@@ -543,69 +520,13 @@ public partial class FloorEvent
 
 public partial class FloorEvent
 {
-    //public void InitializeEvent(int x, int y)
-    //{
-    //    // This function is used to initialize the status of outside-dependent events, like the status of doors and chests.
-
-    //    switch (typeOfEvent)
-    //    {
-    //        default:
-    //            switch (overwriteWalkable)
-    //            {
-    //                case OverwriteWalkable.Walkable:
-    //                    LevelGenerator.instance.walkable[x, y] = true;
-    //                    break;
-    //                case OverwriteWalkable.NonWalkable:
-    //                    LevelGenerator.instance.walkable[x, y] = false;
-    //                    break;
-    //            }
-    //            break;
-    //        case EventType.Stairs:
-    //        case EventType.Ladder:
-    //        case EventType.Rope:
-    //            LevelGenerator.instance.walkable[x, y] = false;
-    //            break;
-    //        case EventType.Door:
-    //            /// Whether door should be open or not
-    //            if (GameManager.instance.EventSwitchExists(eventID))
-    //            {
-    //                if (GameManager.instance.eventSwitches[eventID])
-    //                {
-    //                    overwriteWalkable = OverwriteWalkable.NonWalkable;
-    //                }
-    //                else
-    //                {
-    //                    overwriteWalkable = OverwriteWalkable.Walkable;
-    //                }
-    //            }
-    //            else
-    //            {
-    //                //Debug.Log("Door event does not exist");
-    //                overwriteWalkable = OverwriteWalkable.NonWalkable;
-    //            }
-    //            ///
-    //            if (mapPos == new Vector2(x, y))
-    //            {
-    //                switch (overwriteWalkable)
-    //                {
-    //                    case OverwriteWalkable.Walkable:
-    //                        LevelGenerator.instance.SetTileWalkable(x, y, true);
-    //                        break;
-    //                    case OverwriteWalkable.NonWalkable:
-    //                        LevelGenerator.instance.SetTileWalkable(x, y, false);
-    //                        break;
-    //                }
-    //            }
-    //            break;
-    //    }
-    //}
-
     public FloorEvent CopyFloorEvent()
     {
         FloorEvent copyEvent = new FloorEvent();
 
         copyEvent.typeOfEvent = this.typeOfEvent;
 
+        copyEvent.stairParams = this.stairParams;
         copyEvent.ladderParams = this.ladderParams;
         copyEvent.ropeParams = this.ropeParams;
         copyEvent.warpParams = this.warpParams;

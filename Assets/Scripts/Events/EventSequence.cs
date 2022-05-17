@@ -4,7 +4,7 @@ using UnityEngine;
 
 public enum OverwriteWalkable { None = 0, Walkable = 1, NonWalkable = 2 } // Whether the event should overwrite the walkable status of the tile it is on. Automatically set for certain event types, like stairs.
 public enum EventActivationRange { Touch = 0, StandOn = 1 } // Determines whether the event is activated by standing on the same tile or from one tile away.
-public enum FacingDirection { Up = 0, Down = 1, Left = 2, Right = 3 } // For events that spawn meshes, this affects the rotation the mesh spawns in with.
+//public enum FacingDirection { Up = 0, Down = 1, Left = 2, Right = 3 } // For events that spawn meshes, this affects the rotation the mesh spawns in with.
 [System.Serializable]
 public class EventSequence
 {

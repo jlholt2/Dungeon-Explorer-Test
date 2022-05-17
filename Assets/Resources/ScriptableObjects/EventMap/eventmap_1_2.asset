@@ -30,7 +30,9 @@ MonoBehaviour:
         overwriteWalkable: 2
         activationRange: 0
         events:
-        - typeOfEvent: 3
+        - useCommonEvent: 0
+          commonEvent: {fileID: 0}
+          typeOfEvent: 3
           mapPos: {x: 9, y: 10}
           stairParams:
             goingUp: 0
@@ -59,7 +61,7 @@ MonoBehaviour:
     - switchChecks: []
       varChecks: []
       eventSequence:
-        mapPos: {x: 9, y: 10}
+        mapPos: {x: 4, y: 4}
         eventOrientation: 0
         autoActivate: 1
         activateDirParams:
@@ -70,10 +72,54 @@ MonoBehaviour:
         overwriteWalkable: 2
         activationRange: 0
         events:
-        - typeOfEvent: 3
-          mapPos: {x: 9, y: 10}
+        - useCommonEvent: 0
+          commonEvent: {fileID: 0}
+          typeOfEvent: 3
+          mapPos: {x: 4, y: 4}
           stairParams:
             goingUp: 0
+          ladderParams:
+            changeArea: 0
+            area: 0
+            floor: 0
+          ropeParams:
+            floor: 
+          warpParams:
+            warpData: []
+          doorParams:
+            doorType: 0
+            openDoorLeft: 0
+            openDoorRight: 0
+            openDoorUp: 0
+            openDoorDown: 0
+          dialogParams:
+            dialogEventData: {fileID: 0}
+          battleParams: {}
+          itemParams:
+            itemName: 
+            itemQuantity: 0
+  - mapPos: {x: 9, y: 3}
+    eventPages:
+    - switchChecks: []
+      varChecks: []
+      eventSequence:
+        mapPos: {x: 4, y: 4}
+        eventOrientation: 0
+        autoActivate: 1
+        activateDirParams:
+          activateLeft: 0
+          activateRight: 0
+          activateUp: 0
+          activateDown: 1
+        overwriteWalkable: 2
+        activationRange: 0
+        events:
+        - useCommonEvent: 0
+          commonEvent: {fileID: 0}
+          typeOfEvent: 3
+          mapPos: {x: 4, y: 4}
+          stairParams:
+            goingUp: 1
           ladderParams:
             changeArea: 0
             area: 0

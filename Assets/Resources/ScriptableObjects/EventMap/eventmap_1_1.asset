@@ -30,7 +30,9 @@ MonoBehaviour:
         overwriteWalkable: 0
         activationRange: 0
         events:
-        - typeOfEvent: 8
+        - useCommonEvent: 0
+          commonEvent: {fileID: 0}
+          typeOfEvent: 8
           mapPos: {x: 1, y: 8}
           stairParams:
             goingUp: 0
@@ -70,7 +72,9 @@ MonoBehaviour:
         overwriteWalkable: 2
         activationRange: 0
         events:
-        - typeOfEvent: 3
+        - useCommonEvent: 0
+          commonEvent: {fileID: 0}
+          typeOfEvent: 3
           mapPos: {x: 8, y: 10}
           stairParams:
             goingUp: 1
@@ -99,7 +103,7 @@ MonoBehaviour:
     - switchChecks: []
       varChecks: []
       eventSequence:
-        mapPos: {x: 8, y: 10}
+        mapPos: {x: 4, y: 5}
         eventOrientation: 0
         autoActivate: 1
         activateDirParams:
@@ -110,8 +114,10 @@ MonoBehaviour:
         overwriteWalkable: 2
         activationRange: 0
         events:
-        - typeOfEvent: 3
-          mapPos: {x: 8, y: 10}
+        - useCommonEvent: 0
+          commonEvent: {fileID: 0}
+          typeOfEvent: 3
+          mapPos: {x: 4, y: 5}
           stairParams:
             goingUp: 1
           ladderParams:

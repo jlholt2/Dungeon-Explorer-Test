@@ -337,7 +337,7 @@ public class LevelGenerator : MonoBehaviour
                 for (int branch = 0; branch < currentBranches.Length; branch++)
                 {
                     currentBranches[branch].InitializeEvents();
-                    if(currentBranches[branch].mapPos.x == x && currentBranches[branch].mapPos.y == y)
+                    if (currentBranches[branch].mapPos.x == x && currentBranches[branch].mapPos.y == y && highOrLow == 0)
                     {
                         floorEvents[x, y] = currentBranches[branch];
                     }
@@ -345,6 +345,10 @@ public class LevelGenerator : MonoBehaviour
             }
         }
         //Debug.Log((floorEvents[1, 8].eventPages[0].eventSequence.events[0].dialogParams.dialogEventData.dialogSets[0].dialogs[0].sentences[0]));
+        //if(floorEvents[9, 4] != null)
+        //{
+        //    Debug.Log((floorEvents[9, 4].eventPages[0].eventSequence.events[0].typeOfEvent));
+        //}
     }
 
     private void GenerateTile(int x, int y, Texture2D newMap, GameObject parentTransformGO)
